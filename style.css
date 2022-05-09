@@ -1,0 +1,101 @@
+#colorsections {
+    background: linear-gradient(#0f4675,#0f4675 50%,#fff 50%,#fff 100%);
+}
+.colorsections {
+    background: linear-gradient(#0f4675,#0f4675 50%,#fff 50%,#fff 100%);
+}
+.affichage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    /*background: linear-gradient(#0f4675,#0f4675 50%,#fff 50%,#fff 100%);*/
+}
+.divaffiche {
+    width:  1100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+#space{
+    margin-right: 90px;
+    
+}
+.divaffiche .box {
+    position: relative;
+    width: 320px;
+    background: #fff;
+    padding: 100px 40px 60px ;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+}
+
+.divaffiche .box:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background : #ff226d;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.divaffiche .box:hover:before{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.divaffiche .box h2{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+
+}
+
+.divaffiche .box:hover h2{
+    opacity: 1;
+    color: #fff;
+    transform:  translateY(-40px);
+}
+
+.divaffiche .box h5{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+} 
+.divaffiche .box h4{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+} 
+
+
+.divaffiche .box p{
+    position: relative;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+} 
+.divaffiche .box p:hover{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transition: 0.5s;
+} 
+.divaffiche .box:hover h5 .divaffiche .box:hover p{
+    color: #fff;
+}
